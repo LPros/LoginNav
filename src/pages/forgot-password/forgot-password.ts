@@ -59,7 +59,7 @@ loading: Loading;
 		});*/
 	}
 
-	public goToRegister() {
+	public goToLogin() {
     	this.navCtrl.push(LoginPage);
   	}
 

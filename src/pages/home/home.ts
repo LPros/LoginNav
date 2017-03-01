@@ -12,19 +12,14 @@ import { VisualPage } from '../visual/visual';
 
 export class HomePage {
 
-  pages: Array<{ title: string, component: any }>;
   rootPage: any = VisualPage;
 
   constructor(public navCtrl: NavController, public menu: MenuController, private _auth: AuthService) {
 
 
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage },
-      { title: 'Visual', component: VisualPage }
-    ];
 
-    this.menu.enable(true, 'menu');
+
+    //this.menu.enable(true, 'menu');
   }
 
   openPage(page) {
