@@ -12,7 +12,10 @@
 <ion-row class="logo-row">
 	<ion-col></ion-col>
     <ion-col width-67>
-      <img src="http://placehold.it/300x200"/>
+      <!--<embed style="display:block; margin:auto;" name="E" id="E" src="../../images/Lael Logo.svg" width="150" height="150">-->
+      <object data="../../images/Lael Logo.svg" type="image/svg+xml" width="150" height="150" style="display:block;margin:auto;">
+        <img src="../../images/Lael Logo.png" />
+      </object>
     </ion-col>
     <ion-col></ion-col>
 </ion-row>
@@ -60,7 +63,7 @@
 
 
 
-<!-- --><div> {{ (af.auth | async)?.uid }} </div>
+<!--<div> {{ (af.auth | async)?.uid }} </div>
 
 <p>Form value: {{ registerForm.value | json }}</p>
 <p>Form status: {{ registerForm.status | json }}</p>

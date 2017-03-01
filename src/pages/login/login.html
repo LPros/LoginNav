@@ -1,27 +1,22 @@
-<!--<ion-header>
-  <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-</ion-header>-->
-
-
 <ion-content padding>
 
-<ion-row class="logo-row">
+  <ion-row class="logo-row">
     <ion-col></ion-col>
     <ion-col width-67>
-      <img src="http://placehold.it/300x200"/>
+      
+      <!--<embed style="display:block; margin:auto;" name="E" id="E" src="../../images/Lael Logo.svg" width="150" height="150">-->
+      <object data="../../images/Lael Logo.svg" type="image/svg+xml" width="150" height="150" style="display:block;margin:auto;">
+        <img src="../../images/Lael Logo.png" />
+      </object>
+        
     </ion-col>
     <ion-col></ion-col>
-</ion-row>
+  </ion-row>
 
   <div class="login-box">
 
     <form [formGroup]="loginForm" novalidate (ngSubmit)="onLoginSubmit(loginForm.value)">
-      
+
       <ion-row>
         <ion-col>
           <ion-list inset>
@@ -29,27 +24,28 @@
             <ion-item>
               <ion-input formControlName="email" type="text" placeholder="name@company.com"></ion-input>
             </ion-item>
-            
+
             <ion-item>
               <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
             </ion-item>
-            
+
           </ion-list>
         </ion-col>
       </ion-row>
-      
+
       <ion-row>
         <ion-col class="signup-col">
-          <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.valid">Login</button> 
-	        <button ion-button class="register-btn" block clear type="button" (click)="goToRegister()">Register</button>
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.valid">Login</button>
+          <button ion-button class="register-btn" block clear type="button" (click)="goToRegister()">Register</button>
+          <!--<button ion-button class="register-btn" block clear type="button" (click)="goToForgotPassword()">Forgot Password</button>-->
         </ion-col>
       </ion-row>
 
     </form>
-    <button ion-button class="register-btn" block clear type="button" (click)="signOutWithEmail()">Logout</button>
+    <!--<button ion-button class="register-btn" block clear type="button" (click)="signOutWithEmail()">Logout</button>-->
   </div>
 
-<!--	<div> {{ (af.auth | async)?.uid }} </div>
+  <!--	<div> {{ (af.auth | async)?.uid }} </div>
 	<div> {{ loginForm.status | json}}</div>
 	<div> {{ loginForm.value | json}}</div>
   <div> {{ this.loginMessage}}</div>-->

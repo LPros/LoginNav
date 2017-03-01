@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
 import { NavController, NavParams, AlertController, LoadingController, Loading, ToastController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
+import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 
 import { AuthService } from '../../providers/auth-service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
@@ -85,6 +86,10 @@ export class LoginPage {
 
 	signOutWithEmail() {
   		this._auth.signOut();
+  	}
+
+	goToForgotPassword() {
+  		this.navCtrl.push(ForgotPasswordPage);
   	}
 
 	showLoading() {

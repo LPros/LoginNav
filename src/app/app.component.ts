@@ -18,12 +18,26 @@ import { VisualPage } from '../pages/visual/visual';
 })
 export class MyApp {
 
-  //@ViewChild(Nav) nav: Nav;
+  //@ViewChild(Nav) nav: Nav; //Only needed for automation on the root page. All other pages can have an NavController injected.
   rootPage: any = LoginPage;
   //pages: Array<{ title: string, component: any }>;
   loader: any;
 
   constructor(public platform: Platform, public af: AngularFire, private _auth: AuthService, public loadingCtrl: LoadingController) { //public menu: MenuController,
+
+    this.af.auth.subscribe((auth) => {
+
+      if (auth !== null) {
+        this.rootPage = HomePage;
+        console.log("Logged In");
+      } else {
+        this.rootPage = LoginPage;
+        console.log("Not Logged In");
+      }
+
+      //this.loader.dismiss();
+    });
+
 
     this.initializeApp();
 

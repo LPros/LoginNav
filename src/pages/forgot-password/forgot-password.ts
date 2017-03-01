@@ -1,22 +1,87 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import { NavController, NavParams, AlertController, LoadingController, Loading, ToastController } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 
-/*
-  Generated class for the ForgotPassword page.
+import { AuthService } from '../../providers/auth-service';
+import { AngularFire } from 'angularfire2';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-forgot-password',
   templateUrl: 'forgot-password.html'
 })
 export class ForgotPasswordPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+loading: Loading;
+	retrievePasswordForm: FormGroup;
+	returnedvalue: any = null;
+	retrievePasswordMessage: any = null;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ForgotPasswordPage');
-  }
+  	constructor(public navCtrl: NavController, public navParams: NavParams, public af: AngularFire, private _auth: AuthService, private formBuilder: FormBuilder, private alertCtrl: AlertController, private loadingCtrl: LoadingController, public toastCtrl: ToastController) {
+    	this.buildForm();
+  	}
+
+  	buildForm() {
+  		this.retrievePasswordForm = this.formBuilder.group({
+  			email: this.formBuilder.control('lael@coolility.com', 
+			  Validators.compose([Validators.required, Validators.minLength(5)])
+			)
+  		});
+  	}
+
+
+  	ionViewDidLoad() {
+    	console.log('ionViewDidLoad LoginPage');
+  	}
+
+  	onRetrievePasswordSubmit(): void {
+/*		this.showLoading();  
+  		this._auth.signInWithEmail({ email: this.retrievePasswordForm.get('email').value })
+  		.then( (returnedValue) => {
+			  //returnedValue is a string
+			  setTimeout(() => {
+					if (String(returnedValue) == "Okay") {
+							//this.showNotification(returnedValue);
+							console.log(returnedValue);
+							this.loading.dismiss();
+							//this.navCtrl.setRoot(HomePage);
+
+					} else {
+						this.loading.dismiss();
+						this.showNotification(returnedValue);
+					}	
+			  }, 500) //end setTimeout	
+		}) //end then
+		.catch((err) => {
+			this.loading.dismiss();
+			console.log(err);
+			this.showNotification(err);
+		});*/
+	}
+
+	public goToRegister() {
+    	this.navCtrl.push(LoginPage);
+  	}
+
+	showNotification(text) {	
+		let toast = this.toastCtrl.create({
+      		message: text,
+      		duration: 3000
+    	});
+    	toast.present();    
+		/*let alert = this.alertCtrl.create({
+      		title: 'Notification',
+      		subTitle: text,
+      		buttons: ['OK']
+    	});
+		alert.present(prompt);*/
+  	}
+
+	showLoading() {
+    	this.loading = this.loadingCtrl.create({
+      		content: 'Please wait...'
+    		});
+    	this.loading.present();
+  	}
 
 }
