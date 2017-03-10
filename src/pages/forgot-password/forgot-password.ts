@@ -6,6 +6,9 @@ import { LoginPage } from '../login/login';
 import { AuthService } from '../../providers/auth-service';
 import { AngularFire } from 'angularfire2';
 
+//This site gives instructions on using firebase to reset forgotten passwords
+//https://firebase.google.com/docs/auth/web/manage-users
+
 @Component({
   selector: 'page-forgot-password',
   templateUrl: 'forgot-password.html'

@@ -17,11 +17,11 @@ import { AuthService } from '../providers/auth-service';
 import { ConnectivityService } from '../providers/connectivity-service';
 
 export const firebaseConfig = {
-	apiKey: "AIzaSyDtrViczYDN4XJ8IueimrnaVT6PC0C1BaY",
-	authDomain: "lc-geo-location.firebaseapp.com",
-	databaseURL: "https://lc-geo-location.firebaseio.com",
-	storageBucket: "lc-geo-location.appspot.com",
-	messagingSenderId: "904516934736"
+	apiKey: "",
+	authDomain: "",
+	databaseURL: "",
+	storageBucket: "",
+	messagingSenderId: ""
 };
 
 const myFirebaseAuthConfig = {

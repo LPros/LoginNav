@@ -60,7 +60,7 @@ export class MyApp {
 
   openPage(page) {
     // close the menu when clicking a link from the menu
-    //this.menu.close();
+    this.menu.close();
     // navigate to the new page if it is not the current page
     this.nav.push(page.component);
   }

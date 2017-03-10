@@ -29,13 +29,13 @@ export class RegisterPage {
 			//all fields required
 			//hints
 			this.registerForm = this.formBuilder.group({
-					firstName: this.formBuilder.control('Lael'/*, Validators.compose([Validators.required, Validators.minLength(1)])*/
+					firstName: this.formBuilder.control(''/*, Validators.compose([Validators.required, Validators.minLength(1)])*/
 				),
-					lastName: this.formBuilder.control('Cox'/*, Validators.compose([Validators.required, Validators.minLength(2)])*/
+					lastName: this.formBuilder.control(''/*, Validators.compose([Validators.required, Validators.minLength(2)])*/
 				),
-					email: this.formBuilder.control('lael@coolility.com'/*, Validators.compose([Validators.required, Validators.minLength(5)])*/
+					email: this.formBuilder.control(''/*, Validators.compose([Validators.required, Validators.minLength(5)])*/
 				),
-					password: this.formBuilder.control('password'/*, Validators.compose([Validators.required, Validators.minLength(4)])*/
+					password: this.formBuilder.control(''/*, Validators.compose([Validators.required, Validators.minLength(4)])*/
 				)
 			});
 		}

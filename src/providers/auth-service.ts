@@ -75,7 +75,7 @@ export class AuthService {
   }
 
   signInWithEmail(userLoginDetails: any): firebase.Promise<FirebaseAuthState> {
-    //return this.af.auth.login({ email: 'lael@coolility.com', password: 'password' });
+    //return this.af.auth.login({ email: '', password: '' });
     //console.log(this.af.auth.login(userLoginDetails));
     return this.af.auth.login(userLoginDetails)
       .then(_ => {

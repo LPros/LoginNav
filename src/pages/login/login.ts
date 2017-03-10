@@ -28,10 +28,10 @@ export class LoginPage {
 
   	buildForm() {
   		this.loginForm = this.formBuilder.group({
-  			email: this.formBuilder.control('lael@coolility.com', 
+  			email: this.formBuilder.control('', 
 			  Validators.compose([Validators.required, Validators.minLength(5)])
 			),
-  			password: this.formBuilder.control('password',
+  			password: this.formBuilder.control('',
 				Validators.compose([Validators.required, Validators.minLength(4)])  
 			)
   		});

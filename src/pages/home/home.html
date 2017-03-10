@@ -1,32 +1,25 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>Toggle Menu</button>
-		<ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title align="center">
+			Home
+		</ion-title>
+		<ion-buttons left>
+			<button ion-button menuToggle icon-only>
+				<ion-icon name="menu"></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-buttons right>
+			<button ion-button icon-only (click)="signOutWithEmail()">
+				<ion-icon name="log-out"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-<button ion-button class="register-btn" block clear type="button" (click)="signOutWithEmail()">Logout</button>
+	
+
 
 
 </ion-content>
-
-
-<!--<ion-menu [content]="content">
-	<ion-header>
-		<ion-toolbar>
-			<ion-title>Pages</ion-title>
-		</ion-toolbar>
-	</ion-header>
-
-	<ion-content>
-		<ion-list>
-			<button ion-item *ngFor="let p of pages" (click)="openPage(p)">{{p.title}}</button>
-		</ion-list>
-	</ion-content>
-</ion-menu>
-
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>-->

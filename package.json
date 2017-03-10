@@ -1,7 +1,7 @@
 {
-  "name": "ionic-hello-world",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "name": "lc-login-base",
+  "author": "Lael Consulting",
+  "homepage": "http://lael.com",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
